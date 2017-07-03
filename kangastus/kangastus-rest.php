@@ -30,6 +30,15 @@
         	  "description" => "Tag searchs"
           ]
         ]);
+        
+        register_rest_field( 'kangastus', 'colorMask', [
+          'get_callback' => [$this, 'getColorMask'],
+          'update_callback' => null,
+          'schema' => [
+        	"type" => "string",
+        	"description" => "Color mask"
+          ] 
+        ]);
       }
 
       public function getTags($object) {
@@ -45,6 +54,15 @@
       
       public function getTagsSearch($object) {
         return '|' . implode('|', $this->getTags($object)) . '|';
+      }
+      
+      public function getColorMask($object) {
+        $value = get_post_meta($object[ 'id' ], 'kangastus-color-mask', true);
+      	if ($value) {
+      	  return $value;
+      	}
+      	
+      	return null;
       }
 
     }
