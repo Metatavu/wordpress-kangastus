@@ -3,7 +3,7 @@
  * Created on Jun 28, 2017
  * Plugin Name: Kangastus Management
  * Description: Management functions for Kangastus info TV screens
- * Version: 0.0.1
+ * Version: 0.0.2
  * Author: Metatavu Oy
  */
 
