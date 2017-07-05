@@ -25,10 +25,12 @@
       'public' => true,
       'has_archive' => true,
       'show_in_rest' => true,
+      'hierarchical' => true,
       'supports' => array (
         'title',
         'editor',
-        'thumbnail'
+        'thumbnail',
+        'page-attributes'
       )
     ));
   });
